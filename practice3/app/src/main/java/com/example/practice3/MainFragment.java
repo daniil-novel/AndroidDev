@@ -25,6 +25,7 @@ public class MainFragment extends Fragment {
 
         TextView textView = view.findViewById(R.id.text_view1);
         ImageView imageView = view.findViewById(R.id.zero_two);
+        Button btn1 = view.findViewById(R.id.constraint_layout_button);
         Button btn2 = view.findViewById(R.id.constraint_layout_button2);
         textView.setText(R.string.app_name_Zero);
         imageView.setImageResource(R.drawable.zero_two);
@@ -40,13 +41,53 @@ public class MainFragment extends Fragment {
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
+
         });
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Log.d("gg", "button pressed declarative");
+            }
+        });
 
         return view;
     }
 
-    public void onClick(View view){
-        Log.d("gg", "button pressed declarative");
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.d("gg", "MainFragment: onCreate()");
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.d("gg", "MainFragment: onStart()");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d("gg", "MainFragment: onResume()");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d("gg", "MainFragment: onPause()");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d("gg", "MainFragment: onStop()");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d("gg", "MainFragment: onDestroy()");
+    }
+
 }
