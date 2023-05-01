@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My App</string>
+    <string name="notification_title">Notification Title</string>
+    <string name="notification_message">Notification Message</string>
+    <string name="notification_text">Notification Text lol</string>
+    <string name="notification_icon">Notification Icon</string>
+    <string name="close">Close</string>
+</resources>
