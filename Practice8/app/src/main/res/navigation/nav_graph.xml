@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainPage">
+
+
+    <fragment
+        android:id="@+id/mainPage"
+        android:name="ru.surok.myfirstapplication.UI.Views.Fragments.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPage_to_playingSong"
+            app:destination="@id/playingSong" />
+        <action
+            android:id="@+id/action_mainPage_to_accountPreferencesFragment"
+            app:destination="@id/accountPreferencesFragment" />
+        <action
+            android:id="@+id/action_mainPage_to_musicLibraryList"
+            app:destination="@id/musicLibraryList" />
+    </fragment>
+    <fragment
+        android:id="@+id/playingSong"
+        android:name="ru.surok.myfirstapplication.UI.Views.Fragments.PlayingSongFragment"
+        android:label="fragment_playing_song"
+        tools:layout="@layout/fragment_screen_playing_song" >
+        <action
+            android:id="@+id/action_playingSong_to_playingNextFragment"
+            app:destination="@id/playingNextFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playingNextFragment"
+        android:name="ru.surok.myfirstapplication.UI.Views.Fragments.PlayingNextFragment"
+        android:label="fragment_playing_next"
+        tools:layout="@layout/fragment_playing_next" />
+    <fragment
+        android:id="@+id/accountPreferencesFragment"
+        android:name="ru.surok.myfirstapplication.UI.Views.Fragments.AccountPreferencesFragment"
+        android:label="fragment_account_preferences"
+        tools:layout="@layout/fragment_account_preferences" />
+    <fragment
+        android:id="@+id/musicLibraryList"
+        android:name="ru.surok.myfirstapplication.UI.Views.Fragments.MusicLibraryFragment"
+        android:label="fragment_music_library"
+        tools:layout="@layout/fragment_music_library" />
+</navigation>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">My First Application</string>
+    <string name="play_bt">Play</string>
+    <string name="find_bt">Find</string>
+    <string name="playing_music_bt">Your music</string>
+    <string name="acc_bt_desript">Account Button</string>
+    <string name="wave_settings_bt_descript">Settings of your wave</string>
+    <string name="search_bar_hint">Find your music</string>
+    <string name="play_bt_descript">Play music</string>
+    <string name="hint_tv">Enter text in search bar and press play</string>
+    <string name="decript_album_cover">Song album cover</string>
+    <string name="decript_back_button">Button to get on previous screen</string>
+    <string name="decript_play_bt">Play music</string>
+    <string name="decript_prev_song">Switch to previous song</string>
+    <string name="decript_next_song">Switch to next song</string>
+    <string name="CHANNEL_ID">SUROK_MUSIC_APP</string>
+    <string name="CHANNEL_NAME">Music App</string>
+    <string name="CHANNEL_DESCRIPTION">Notifications about next playing track</string>
+    <string name="next_track">Next Track</string>
+    <string name="preference_file_key">preference_file_key_for_account</string>
+    <string name="theme_preference_key">theme_preference_for_acc</string>
+    <string name="switch2_key">switch_1_preference_for_acc</string>
+    <string name="switch3_key">switch_2_preference_for_acc</string>
+</resources>

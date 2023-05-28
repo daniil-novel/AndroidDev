@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageButton
+            android:id="@+id/bt_play"
+            android:layout_width="@dimen/small_bt_size"
+            android:layout_height="@dimen/small_bt_size"
+            android:contentDescription="@string/play_bt_descript"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/bt_next_playing"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@android:drawable/ic_media_play"/>
+
+        <ImageButton
+            android:id="@+id/bt_next"
+            android:layout_width="@dimen/small_bt_size"
+            android:layout_height="@dimen/small_bt_size"
+            android:contentDescription="@string/decript_next_song"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bt_play"
+            app:layout_constraintTop_toTopOf="@id/bt_play"
+            app:srcCompat="@android:drawable/ic_media_next"/>
+
+        <ImageButton
+            android:id="@+id/bt_prev"
+            android:layout_width="@dimen/small_bt_size"
+            android:layout_height="@dimen/small_bt_size"
+            android:contentDescription="@string/decript_prev_song"
+            app:layout_constraintEnd_toStartOf="@id/bt_play"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bt_play"
+            app:srcCompat="@android:drawable/ic_media_previous"/>
+
+        <ImageButton
+            android:id="@+id/bt_next_playing"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintEnd_toStartOf="@+id/bt_play"
+            app:layout_constraintStart_toEndOf="@+id/bt_prev"
+            app:layout_constraintTop_toBottomOf="@id/bt_play"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/small_button_background"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:adjustViewBounds="true"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/menu_burger"/>
+
+        <ImageButton
+            android:id="@+id/bt_like"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/small_button_background"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:adjustViewBounds="true"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintTop_toBottomOf="@id/bt_play"
+            app:layout_constraintEnd_toStartOf="@+id/bt_next"
+            app:layout_constraintStart_toEndOf="@+id/bt_play"
+            app:srcCompat="@drawable/heart" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

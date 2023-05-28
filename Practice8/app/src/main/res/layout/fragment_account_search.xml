@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <ImageButton
+        android:id="@+id/bt_account"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/user"
+        android:contentDescription="@string/acc_bt_desript"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"/>
+
+    <EditText
+        android:id="@+id/textEdit_find"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:autofillHints="name"
+        android:background="@drawable/find_background"
+        android:hint="@string/search_bar_hint"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

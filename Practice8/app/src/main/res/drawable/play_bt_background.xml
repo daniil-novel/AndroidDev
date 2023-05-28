@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:gravity="center"
+        android:width="@dimen/bt_big_size_w"
+        android:height="@dimen/bt_big_size_w">
+        <shape android:shape="oval">
+            <solid android:color="@color/purple_700"/>
+        </shape>
+    </item>
+    <item android:gravity="center">
+        <rotate android:fromDegrees="90">
+            <vector
+                android:height="100dp"
+                android:width="100dp"
+                android:viewportWidth="24"
+                android:viewportHeight="26">
+                <path android:fillColor="@color/white" android:pathData="M1,21H23L12,2" />
+            </vector>
+        </rotate>
+    </item>
+</layer-list>

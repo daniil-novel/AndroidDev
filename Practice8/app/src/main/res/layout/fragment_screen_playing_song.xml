@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Views.Fragments.PlayingSongFragment">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/songCoverNameView"
+        android:name="ru.surok.myfirstapplication.UI.Views.Fragments.SongCoverNameFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        tools:layout="@layout/fragment_song_cover_name" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/trackPlaySkipBtView"
+        android:name="ru.surok.myfirstapplication.UI.Views.Fragments.AudioBtFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="30dp"
+        tools:layout="@layout/fragment_audio_bts" />
+
+</FrameLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Views.Fragments.MainPageFragment">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/accountSearchView"
+        android:name="ru.surok.myfirstapplication.UI.Views.Fragments.AccountAndSearchFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        tools:layout="@layout/fragment_account_search" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/musicLibraryView"
+            android:name="ru.surok.myfirstapplication.UI.Views.Fragments.WaveSettingsMusicLibraryFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            tools:layout="@layout/fragment_wave_settings_music_library" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/playingTrackView"
+            android:name="ru.surok.myfirstapplication.UI.Views.Fragments.BottomPlayerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            tools:layout="@layout/fragment_bottom_player" />
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bigBtView"
+        android:name="ru.surok.myfirstapplication.UI.Views.Fragments.PlayBtFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:layout="@layout/fragment_play_bt" />
+
+</FrameLayout>
