@@ -1,10 +1,10 @@
 package com.example.myapplication7.data;
 
-public class Object {
+public class MyObject {
     private final int number;
     private final String string;
 
-    public Object(int number, String string)
+    public MyObject(int number, String string)
     {
         this.number = number;
         this.string = string;

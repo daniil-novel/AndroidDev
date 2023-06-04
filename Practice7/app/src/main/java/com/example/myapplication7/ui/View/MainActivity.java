@@ -1,4 +1,4 @@
-package com.example.myapplication7.ui;
+package com.example.myapplication7.ui.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -12,6 +12,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.myapplication7.R;
+import com.example.myapplication7.data.DataSourses.ListFiller;
+import com.example.myapplication7.data.MyObject;
+import com.example.myapplication7.ui.ViewModel.MyViewModel;
+import com.example.myapplication7.ui.adapters.MyListAdapter;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MyApp";
@@ -30,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         editText = findViewById(R.id.editTextTextPersonName2);
         textView1 = findViewById(R.id.textView);
 
-
         editText.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -43,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(viewModel.setAdapter(this));
+        MyListAdapter myListAdapter = new MyListAdapter(getApplicationContext(), ListFiller.createList(10));
+        listView.setAdapter(myListAdapter);
 
         viewModel.getEditText().observe(this, new Observer<String>() {
             @Override
@@ -53,16 +57,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-
-
-    public void AddElement(View view)
-    {
-        if (view.getId() == R.id.button)
-        {
-            listView.setAdapter(viewModel.updateAdapter(this));
-        }
-    }
-
 
 }

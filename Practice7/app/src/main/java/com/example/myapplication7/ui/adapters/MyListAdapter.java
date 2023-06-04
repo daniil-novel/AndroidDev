@@ -1,4 +1,4 @@
-package com.example.myapplication7.ui;
+package com.example.myapplication7.ui.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,16 +8,17 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.myapplication7.R;
-import com.example.myapplication7.data.Object;
+import com.example.myapplication7.data.MyObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class MyListAdapter extends ArrayAdapter<Object> {
+public class MyListAdapter extends ArrayAdapter<MyObject> {
 
-    private ArrayList<Object> objects;
+    private List<MyObject> objects;
     private Context context;
 
-    public MyListAdapter(Context context, ArrayList<Object> objects) {
+    public MyListAdapter(Context context, List<MyObject> objects) {
         super(context, R.layout.block_list, objects);
         this.context = context;
         this.objects = objects;
@@ -29,7 +30,7 @@ public class MyListAdapter extends ArrayAdapter<Object> {
     }
 
     @Override
-    public Object getItem(int position) {
+    public MyObject getItem(int position) {
         return objects.get(position);
     }
 
@@ -49,7 +50,7 @@ public class MyListAdapter extends ArrayAdapter<Object> {
         TextView textView1 = view.findViewById(R.id.numberview_id);
         TextView textView2 = view.findViewById(R.id.textview_id);
 
-        Object object = objects.get(position);
+        MyObject object = objects.get(position);
 
         textView1.setText(String.valueOf(object.getNumber()));
         textView2.setText(object.getString());
