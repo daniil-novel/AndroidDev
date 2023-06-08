@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">pract6</string>
+    <string name="notification_title">This is title!</string>
+</resources>
